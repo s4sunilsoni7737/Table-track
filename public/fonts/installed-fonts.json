@@ -1,0 +1,15 @@
+{
+    "notosans": {
+        "normal": "\/Users\/abhinav\/htdocs\/tabletrack\/public\/fonts\/notosans_normal_3a78612ccee527414d2c92dcba5096ce",
+        "bold": "notosans_bold_4ff173a9add1504992e56e789e7439da"
+    },
+    "thsarabunnew": {
+        "bold": "C:\\Users\\s4sun\\Downloads\\tabletrack\\codecanyon-55116396-tabletrack-the-complete-saas-restaurant-management-solution\\tabletrack-1.2.80\\script\\public\\fonts\/thsarabunnew_bold_de33fbb912d99c560a01911beb001f77",
+        "bold_italic": "thsarabunnew_bold_italic_8b0460cf96f8ad9f6f9a3a54de4f4ec7"
+    },
+    "bevietnampro": {
+        "normal": "C:\\Users\\s4sun\\Downloads\\tabletrack\\codecanyon-55116396-tabletrack-the-complete-saas-restaurant-management-solution\\tabletrack-1.2.80\\script\\public\\fonts\/bevietnampro_normal_ad8b517068ce524e5e3a90a457ac3062",
+        "italic": "C:\\Users\\s4sun\\Downloads\\tabletrack\\codecanyon-55116396-tabletrack-the-complete-saas-restaurant-management-solution\\tabletrack-1.2.80\\script\\public\\fonts\/bevietnampro_italic_043c096cb313e1e172cc56a3fca41004",
+        "bold_italic": "bevietnampro_bold_italic_6d37c4edc571cac2c7358ed03deecefa"
+    }
+}

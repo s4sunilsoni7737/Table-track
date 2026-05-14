@@ -1,0 +1,298 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    :root {
+      --color-base: 167, 139, 250;
+    }
+}
+
+
+[x-cloak] {
+    display: none;
+}
+
+/* Hide Specific Trix Buttons */
+.trix-button-group--file-tools,
+.trix-button--icon-code,
+.trix-button--icon-decrease-nesting-level,
+.trix-button--icon-increase-nesting-level,
+.trix-button--icon-strike {
+    display: none !important;
+}
+
+/* Trix Button Customization */
+.trix-button-group,
+.trix-button {
+    border: none !important;
+    border-top: none !important;
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+    font-size: 13px !important;
+    padding: 0 !important;
+}
+
+/* Active Button Style */
+.trix-button.trix-active {
+    border: 1px solid #000000 !important;
+    background: white !important;
+    color: #000;
+    border-radius: 3px;
+}
+
+/* Trix Content Styles */
+.trix-content {
+  @apply w-full;
+}
+
+.trix-content h1 {
+  font-size: 1.25rem !important;
+  line-height: 1.25rem !important;
+  @apply leading-5 font-semibold mb-4;
+}
+
+.trix-content a:not(.no-underline) {
+  @apply underline;
+}
+
+
+.trix-content ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+.trix-content ol {
+  list-style-type: decimal;
+  padding-left: 1rem;
+}
+
+.trix-content pre {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  font-family: monospace;
+  font-size: 1.5em;
+  padding: 0.5em;
+  white-space: pre;
+  background-color: #eee;
+  overflow-x: auto;
+}
+
+.trix-content blockquote {
+  border: 0 solid #ccc;
+  border-left-width: 0px;
+  border-left-width: 0.3em;
+  margin-left: 0.3em;
+  padding-left: 0.6em;
+}
+
+/* Pikaday Size Reduction */
+.pika-lendar {
+  width: 200px !important;
+  margin: 6px !important;
+}
+
+.pika-label {
+  font-size: 12px !important;
+  line-height: 18px !important;
+  padding: 4px 2px !important;
+}
+
+.pika-table th {
+  font-size: 11px !important;
+  line-height: 20px !important;
+}
+
+.pika-button {
+  font-size: 11px !important;
+  line-height: 14px !important;
+  padding: 4px !important;
+}
+
+.pika-week {
+  font-size: 10px !important;
+}
+
+.pika-prev,
+.pika-next {
+  width: 18px !important;
+  height: 26px !important;
+}
+
+/* Pikaday Dark Mode Styles */
+.dark .pika-single {
+  background: #1f2937;
+  border-color: #374151;
+  color: #f3f4f6;
+}
+
+.dark .pika-label {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+.dark .pika-table th {
+  color: #9ca3af;
+}
+
+.dark .pika-button {
+  color: #d1d5db;
+  background: #374151;
+}
+
+.dark .pika-button:hover {
+  background: #4b5563;
+  color: #f3f4f6;
+}
+
+.dark .pika-week {
+  color: #9ca3af;
+}
+
+.dark .is-today .pika-button {
+  color: #60a5fa;
+  font-weight: bold;
+}
+
+.dark .is-selected .pika-button,
+.dark .has-event .pika-button {
+  color: #fff;
+  background: #3b82f6;
+  box-shadow: inset 0 1px 3px #2563eb;
+}
+
+.dark .has-event .pika-button {
+  background: #1e40af;
+  box-shadow: inset 0 1px 3px #1e3a8a;
+}
+
+.dark .is-disabled .pika-button,
+.dark .is-inrange .pika-button {
+  background: #1e3a8a;
+  color: #6b7280;
+}
+
+.dark .is-startrange .pika-button {
+  color: #fff;
+  background: #10b981;
+}
+
+.dark .is-endrange .pika-button {
+  color: #fff;
+  background: #3b82f6;
+}
+
+.dark .pika-prev,
+.dark .pika-next {
+  opacity: 0.7;
+  filter: brightness(0) invert(1);
+}
+
+.dark .pika-prev:hover,
+.dark .pika-next:hover {
+  opacity: 1;
+  filter: brightness(0) invert(1);
+}
+
+.dark .pika-prev.is-disabled,
+.dark .pika-next.is-disabled {
+  opacity: 0.3;
+  filter: brightness(0) invert(1);
+}
+
+
+ /* Hide number input spinners in time picker */
+ .time-picker-input::-webkit-inner-spin-button,
+ .time-picker-input::-webkit-outer-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+ }
+ .time-picker-input {
+     -moz-appearance: textfield;
+ }
+
+ /* Pikaday dark theme */
+.dark .pika-single {
+    background: #1f2937 !important; /* Tailwind slate-800 */
+    border: 1px solid #374151 !important; /* slate-700 */
+    color: #e5e7eb !important; /* gray-200 */
+    border-radius: 8px;
+}
+
+.dark .pika-title select {
+    background: #374151 !important;
+    color: #e5e7eb !important;
+    border: none !important;
+}
+
+.dark .pika-button {
+    background: transparent !important;
+    color: #e5e7eb !important;
+}
+
+.dark .pika-button:hover {
+    background: #4b5563 !important; /* slate-600 */
+    color: white !important;
+}
+
+.dark .is-selected .pika-button {
+    background: #6d28d9 !important; /* purple-700 */
+    color: white !important;
+}
+
+.dark .pika-table th {
+    color: #cbd5e1 !important;
+}
+
+.dark .is-today .pika-button {
+    border: 1px solid #8b5cf6 !important; /* violet border for today */
+    color: #c4b5fd !important;
+}
+
+
+
+/* Base picker panel */
+.dark-pikaday.pika-single {
+    background-color: #1e293b !important; /* slate-800 */
+    color: #f1f5f9 !important; /* light text */
+    border: 1px solid #475569 !important; /* slate-600 */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* Header */
+.dark-pikaday .pika-title select {
+    background: #334155;
+    color: #e2e8f0;
+    border: none;
+}
+
+/* Day buttons */
+.dark-pikaday .pika-button {
+    background: none;
+    color: #e2e8f0;
+}
+
+.dark-pikaday .pika-button:hover {
+    background: #475569;
+    color: white;
+}
+
+/* Selected day */
+.dark-pikaday .is-selected .pika-button {
+    background: #6366f1;
+    color: #fff;
+}
+
+/* Today highlight */
+.dark-pikaday .is-today .pika-button {
+    border: 1px solid #94a3b8;
+    color: #cbd5e1;
+}
+
+/* Disabled dates */
+.dark-pikaday .is-disabled .pika-button {
+    opacity: 0.4;
+}

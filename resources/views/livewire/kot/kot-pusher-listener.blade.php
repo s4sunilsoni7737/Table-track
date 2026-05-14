@@ -1,0 +1,9 @@
+<div
+    class="hidden"
+    aria-hidden="true"
+    wire:key="kot-pusher-listener-root"
+    @if(!pusherSettings()->is_enabled_pusher_broadcast)
+        wire:init="pollKotStatusFeed"
+        wire:poll.10s="pollKotStatusFeed"
+    @endif
+></div>
