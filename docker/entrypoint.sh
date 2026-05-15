@@ -71,6 +71,7 @@ echo "[OK] .env written"
 # -----------------------------------------------------------------------
 cd /var/www/html
 
+php artisan package:discover --ansi
 php artisan config:clear
 php artisan config:cache
 php artisan route:cache

@@ -12,7 +12,11 @@ RUN composer install \
     --no-interaction \
     --no-scripts \
     --prefer-dist \
-    --optimize-autoloader
+    --no-autoloader \
+    --ignore-platform-reqs
+
+COPY . .
+RUN composer dump-autoload --optimize --no-scripts
 
 ############################
 # Stage 2 – Node / Vite build
@@ -25,6 +29,7 @@ RUN npm ci --legacy-peer-deps
 
 COPY resources ./resources
 COPY public ./public
+COPY scripts ./scripts
 COPY vite.config.js tailwind.config.js postcss.config.js ./
 
 RUN npm run build
