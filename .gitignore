@@ -1,3 +1,6 @@
+##########################################################################
+# Laravel core ignores
+##########################################################################
 /.phpunit.cache
 /node_modules
 /public/build
@@ -8,6 +11,8 @@
 .env
 .env.backup
 .env.production
+.env.staging
+.env.local
 .phpactor.json
 .phpunit.result.cache
 Homestead.json
@@ -15,34 +20,80 @@ Homestead.yaml
 auth.json
 npm-debug.log
 yarn-error.log
+
+##########################################################################
+# IDEs & editors
+##########################################################################
 /.fleet
 /.idea
 /.vscode
+*.swp
+*.swo
+*.bak
+.DS_Store
+Thumbs.db
 
-public/user-uploads/public/hot
+##########################################################################
+# Vercel (no longer used)
+##########################################################################
+/.vercel
 
-/public/css/app-custom.css
-/public/user-uploads/*
+##########################################################################
+# User-generated content & qr codes (runtime data, not source)
+##########################################################################
+public/user-uploads/*
 !public/user-uploads/.htaccess
-
 /public/qrcodes/*
 !public/qrcodes/.htaccess
 
+##########################################################################
+# Laravel installer flags & caches
+##########################################################################
 /storage/installed
-ngrok
 /bootstrap/cache/*
-froiden-verify/
-*.zip
-.DS_Store
-resources/views/sections/custom_script.blade.php
-demo_db_copy.sql
-database/maxmind/
-public/css/app-custom.css
-public/css/theme-custom.css
+!bootstrap/cache/.gitignore
+ngrok
 
+##########################################################################
+# Sensitive certificates & keys
+##########################################################################
+# SSL CA bundle for DB connections (e.g. Aiven, RDS) – never commit real certs
+ca.pem
+*.pem
+*.crt
+*.key
+*.p12
+*.pfx
+
+##########################################################################
+# Build & dependency artefacts
+##########################################################################
+*.zip
+froiden-verify/
+
+##########################################################################
+# Assets generated at build time
+##########################################################################
+/public/css/app-custom.css
+/public/css/theme-custom.css
+resources/views/sections/custom_script.blade.php
+
+##########################################################################
+# Database utilities & dumps
+##########################################################################
+demo_db_copy.sql
+*.sql
+database/maxmind/
+
+##########################################################################
+# Language packs (keep only English baseline)
+##########################################################################
 lang/*
 !lang/eng/
+
+##########################################################################
+# Misc / legacy
+##########################################################################
 superadmin-nextjs/
 superadmin-remix/
 html/
-
